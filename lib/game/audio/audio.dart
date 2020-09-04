@@ -1,25 +1,25 @@
-import 'package:flame/flame_audio.dart';
+import 'package:flame/flame.dart';
 
 class Audio {
-  static FlameAudio audio = FlameAudio();
-
   static Future<void> load() async {
-    audio.loadAll(["jump.ogg", "bgm.ogg", "start.ogg", "crashed.ogg"]);
+    Flame.bgm.initialize();
+    Flame.bgm.loadAll(["bgm.ogg"]);
+    Flame.audio.loadAll(["jump.ogg", "start.ogg", "crashed.ogg"]);
   }
 
   static void playJump() {
-    audio.play("jump.ogg");
+    Flame.audio.play("jump.ogg");
   }
 
   static void playCrashed() {
-    audio.play("crashed.ogg");
+    Flame.audio.play("crashed.ogg");
   }
 
   static void loopBGM() {
-    audio.loopLongAudio("bgm.ogg");
+    Flame.bgm.play("bgm.ogg");
   }
 
   static void playNewStart() {
-    audio.play("start.ogg", volume: 0.8);
+    Flame.audio.play("start.ogg", volume: 0.6);
   }
 }

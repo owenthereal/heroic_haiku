@@ -97,8 +97,8 @@ class Game extends BaseGame with MultiTouchTapDetector, HasTapableComponents {
     ninja.status = NinjaStatus.running;
     status = GameStatus.playing;
     ninja.hasPlayedIntro = true;
-    Audio.playNewStart();
     Audio.loopBGM();
+    Audio.playNewStart();
   }
 
   bool get playing => status == GameStatus.playing;
