@@ -6,6 +6,7 @@ import 'package:flame/components/component.dart';
 import 'package:flame/components/mixins/resizable.dart';
 import 'package:flame/sprite.dart';
 import 'package:heroic_haiku/game/ninja/config.dart';
+import 'package:heroic_haiku/game/audio/audio.dart';
 
 enum NinjaStatus { crashed, jumping, running, waiting, intro }
 
@@ -57,6 +58,7 @@ class Ninja extends PositionComponent with Resizable {
 
     status = NinjaStatus.jumping;
     jumpVelocity = NinjaConfig.initialJumpVelocity - (speed / 10);
+    Audio.playJump();
   }
 
   @override
@@ -121,6 +123,8 @@ class Ninja extends PositionComponent with Resizable {
   }
 
   bool get playingIntro => status == NinjaStatus.intro;
+  bool get crashed => status == NinjaStatus.crashed;
+  bool get jumping => status == NinjaStatus.jumping;
 }
 
 class RunningNinja extends AnimationComponent {

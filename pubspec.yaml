@@ -74,3 +74,7 @@ flutter:
   assets:
     - assets/images/heroic_haiku.gif
     - assets/images/sprite.png
+    - assets/audio/start.ogg
+    - assets/audio/bgm.ogg
+    - assets/audio/jump.ogg
+    - assets/audio/crashed.ogg

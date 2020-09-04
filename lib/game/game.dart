@@ -11,6 +11,7 @@ import 'package:heroic_haiku/game/game_config.dart';
 import 'package:heroic_haiku/game/game_over/game_over.dart';
 import 'package:heroic_haiku/game/ninja/config.dart';
 import 'package:heroic_haiku/game/ninja/ninja.dart';
+import 'package:heroic_haiku/game/audio/audio.dart';
 
 class Background extends Component with Resizable {
   Background();
@@ -96,6 +97,8 @@ class Game extends BaseGame with MultiTouchTapDetector, HasTapableComponents {
     ninja.status = NinjaStatus.running;
     status = GameStatus.playing;
     ninja.hasPlayedIntro = true;
+    Audio.playNewStart();
+    Audio.loopBGM();
   }
 
   bool get playing => status == GameStatus.playing;
@@ -105,6 +108,7 @@ class Game extends BaseGame with MultiTouchTapDetector, HasTapableComponents {
     gameOverPanel.visible = true;
     status = GameStatus.gameOver;
     ninja.status = NinjaStatus.crashed;
+    Audio.playCrashed();
   }
 
   void restart() {
@@ -113,5 +117,6 @@ class Game extends BaseGame with MultiTouchTapDetector, HasTapableComponents {
     horizon.reset();
     currentSpeed = GameConfig.speed;
     gameOverPanel.visible = false;
+    Audio.playNewStart();
   }
 }

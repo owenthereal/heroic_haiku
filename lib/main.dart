@@ -4,12 +4,14 @@ import 'package:flame_splash_screen/flame_splash_screen.dart';
 import 'package:flutter/services.dart';
 
 import 'package:heroic_haiku/game/game.dart';
+import 'package:heroic_haiku/game/audio/audio.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Flame.util.setLandscape();
   await Flame.util.fullScreen();
+  await Audio.load();
 
   runApp(MaterialApp(
     title: 'Heroic Haiku',
@@ -75,6 +77,7 @@ class _GameWrapperState extends State<GameWrapper> {
         child: Text("Loading"),
       );
     }
+
     return Container(
       color: Colors.white,
       constraints: const BoxConstraints.expand(),
