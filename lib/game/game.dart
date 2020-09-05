@@ -12,6 +12,7 @@ import 'package:heroic_haiku/game/game_over/game_over.dart';
 import 'package:heroic_haiku/game/ninja/config.dart';
 import 'package:heroic_haiku/game/ninja/ninja.dart';
 import 'package:heroic_haiku/game/audio/audio.dart';
+import 'package:heroic_haiku/game/score/score.dart';
 
 class Background extends Component with Resizable {
   Background();
@@ -34,17 +35,25 @@ class Game extends BaseGame with MultiTouchTapDetector, HasTapableComponents {
   Game({Image spriteImage}) {
     ninja = Ninja(spriteImage);
     horizon = Horizon(spriteImage);
+    score = Score(spriteImage);
     gameOverPanel = GameOverPanel(spriteImage);
 
-    this..add(Background())..add(horizon)..add(ninja)..add(gameOverPanel);
+    this
+      ..add(Background())
+      ..add(horizon)
+      ..add(ninja)
+      ..add(gameOverPanel)
+      ..add(score);
   }
 
   Ninja ninja;
   Horizon horizon;
+  Score score;
   GameOverPanel gameOverPanel;
   GameStatus status = GameStatus.waiting;
 
   double currentSpeed = GameConfig.speed;
+  double timePlaying = 0.0;
 
   @override
   void onTapDown(_, __) {
@@ -78,7 +87,9 @@ class Game extends BaseGame with MultiTouchTapDetector, HasTapableComponents {
     }
 
     if (playing) {
+      timePlaying += t;
       horizon.updateWithSpeed(t, currentSpeed);
+      score.updateScore(timePlaying);
 
       final obstacles = horizon.horizonLine.obstacleManager.components;
       final hasCollision =
@@ -97,6 +108,7 @@ class Game extends BaseGame with MultiTouchTapDetector, HasTapableComponents {
     ninja.status = NinjaStatus.running;
     status = GameStatus.playing;
     ninja.hasPlayedIntro = true;
+    timePlaying = 0;
     Audio.loopBGM();
     Audio.playNewStart();
   }
@@ -108,6 +120,7 @@ class Game extends BaseGame with MultiTouchTapDetector, HasTapableComponents {
     gameOverPanel.visible = true;
     status = GameStatus.gameOver;
     ninja.status = NinjaStatus.crashed;
+    timePlaying = 0;
     Audio.playCrashed();
   }
 
@@ -115,6 +128,7 @@ class Game extends BaseGame with MultiTouchTapDetector, HasTapableComponents {
     status = GameStatus.playing;
     ninja.reset();
     horizon.reset();
+    timePlaying = 0;
     currentSpeed = GameConfig.speed;
     gameOverPanel.visible = false;
     Audio.playNewStart();
