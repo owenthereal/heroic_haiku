@@ -1,7 +1,7 @@
 import 'package:heroic_haiku/game/collision/collision_box.dart';
 
 class NinjaConfig {
-  static double gravity = 0.8;
+  static double gravity = 0.7;
   static double height = 90.0;
   static double heightDuck = 50.0;
   static double initialJumpVelocity = -15.0;
