@@ -5,12 +5,12 @@ const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "index.html": "61eff6dad2f9257ae5cc7d2e87e37f42",
 "/": "61eff6dad2f9257ae5cc7d2e87e37f42",
-"main.dart.js": "6c2db0cdcd1df4624bc03aabc8bfc887",
+"main.dart.js": "52bbf54c68dee305f9760e9a1579fa1a",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "manifest.json": "619a0e4b775c4b69e339b6753c24241c",
-"assets/AssetManifest.json": "4d643c93fde685c59cff41ab36834753",
+"assets/AssetManifest.json": "53f0d2e49892463743021919197cab6d",
 "assets/NOTICES": "843a78617acd9b4d2351ceb1e5bb4b1d",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
@@ -19,10 +19,10 @@ const RESOURCES = {
 "assets/fonts/MaterialIcons-Regular.otf": "a68d2a28c526b3b070aefca4bac93d25",
 "assets/assets/images/heroic_haiku.gif": "47808728882d3aa6757499c7beb878a1",
 "assets/assets/images/sprite.png": "c251e93b17d6f5f317adb88936f9a128",
-"assets/assets/audio/crashed.ogg": "f157496d9b220ca8480e7f29b9164a02",
-"assets/assets/audio/bgm.ogg": "53a69bb64d4bfb692c9b14971bd29faa",
-"assets/assets/audio/jump.ogg": "18119199f07532dd746130b8264c387e",
-"assets/assets/audio/start.ogg": "1b1d148c4210da14c17a833ee74ac918"
+"assets/assets/audio/start.mp3": "02ab6a183639d8301bb88160990db9f3",
+"assets/assets/audio/bgm.mp3": "0a8ca67818f8d8fb36dcce5dd0e63403",
+"assets/assets/audio/crashed.mp3": "158250e867811e1cd6aac4717244c4e7",
+"assets/assets/audio/jump.mp3": "1f8a1a884787c858a9e0cbf9386b0e8f"
 };
 
 // The application shell files that are downloaded before a service worker can

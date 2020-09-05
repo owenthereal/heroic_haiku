@@ -6968,9 +6968,9 @@ var $async$Ub=P.W(function(a,b){if(a===1)return P.Y(b,r)
 while(true)switch(s){case 0:p=$.nA;(p==null?$.nA=new F.k3():p).LP(0)
 if($.nA==null)$.nA=new F.k3()
 p=t.i
-q=H.c(["bgm.ogg"],p)
+q=H.c(["bgm.mp3"],p)
 $.jT().xn(q)
-$.jT().xn(H.c(["jump.ogg","start.ogg","crashed.ogg"],p))
+$.jT().xn(H.c(["jump.mp3","start.mp3","crashed.mp3"],p))
 return P.Z(null,r)}})
 return P.a_($async$Ub,r)}},G={E3:function E3(){},aQ:function aQ(){},bn:function bn(){},KM:function KM(a){this.a=a},KN:function KN(){},y_:function y_(){},ip:function ip(){},Eu:function Eu(){},Ev:function Ev(a,b){this.a=a
 this.b=b},Ex:function Ex(a){this.a=a},Ey:function Ey(a){this.a=a},Ez:function Ez(){},EA:function EA(){},Ew:function Ew(a){this.a=a},z8:function z8(){},uX:function uX(a,b){this.a=a
@@ -37326,7 +37326,7 @@ s.ch.b=1200
 p.go=0
 p.fy=10
 p.fr.Q=!1
-$.jT().a.fg(0,"start.ogg",C.ji,0.6)
+$.jT().a.fg(0,"start.mp3",C.ji,0.6)
 return}p.db.zM(p.fy)},
 aE:function(a,b){var s,r,q,p=this
 p.zT(0,b)
@@ -37339,8 +37339,8 @@ if(r&&s.a>=50){s.sad(0,C.kY)
 p.fx=C.k0
 p.db.fr=!0
 p.go=0
-s=$.nA;(s==null?$.nA=new F.k3():s).m0(0,"bgm.ogg")
-$.jT().a.fg(0,"start.ogg",C.ji,0.6)}else if(r)p.dx.dD(0,p.fy)
+s=$.nA;(s==null?$.nA=new F.k3():s).m0(0,"bgm.mp3")
+$.jT().a.fg(0,"start.mp3",C.ji,0.6)}else if(r)p.dx.dD(0,p.fy)
 if(p.fx===C.k0){p.go+=b
 p.dx.dD(b,p.fy)
 p.dy.Ob(p.go)
@@ -37350,7 +37350,7 @@ if(s<50)p.fy=s+0.005}else{p.fr.Q=!0
 p.fx=C.k1
 p.db.sad(0,C.nG)
 p.go=0
-$.jT().a.fg(0,"crashed.ogg",C.ji,1)}}}}
+$.jT().a.fg(0,"crashed.mp3",C.ji,1)}}}}
 D.z7.prototype={}
 D.Ai.prototype={}
 D.Aj.prototype={}
@@ -37450,7 +37450,7 @@ case C.fX:case C.kY:default:return s.cx}},
 zM:function(a){if(this.Q===C.iH)return
 this.sad(0,C.iH)
 this.dx=-15-a/10
-$.jT().a.fg(0,"jump.ogg",C.ji,1)},
+$.jT().a.fg(0,"jump.mp3",C.ji,1)},
 cv:function(a){if(this.bd$==null)return
 this.gcd(this).cv(a)},
 dz:function(a){var s=this
