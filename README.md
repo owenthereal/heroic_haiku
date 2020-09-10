@@ -1,6 +1,6 @@
-# heroic_haiku
+# Heroic Haiku
 
-This is a game powered by [Flutter](https://flutter.dev) and [Flame](https://flame-engine.org).
+[Heroic Haiku](https://en.wikipedia.org/wiki/Heroku) is a game powered by [Flutter](https://flutter.dev) and [Flame](https://flame-engine.org).
 It is an excercise that I did to re-learn Flutter.
 The game is heavily inspired by [Chrome's Dino Game](https://www.blog.google/products/chrome/chrome-dino).
 
