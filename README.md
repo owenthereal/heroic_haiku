@@ -8,8 +8,8 @@ The game is heavily inspired by [Chrome's Dino Game](https://www.blog.google/pro
 
 I am impressed that the web and mobile version behave pretty much the same! It is really "write once, run everywhere"!
 
-* [Web](https://jingweno.github.io/heroic_haiku)
-* [Android](https://jingweno.github.io/heroic_haiku/android/heroic_haiku.apk)
+* [Web](https://owenthereal.github.io/heroic_haiku)
+* [Android](https://owenthereal.github.io/heroic_haiku/android/heroic_haiku.apk)
 
 ## Build
 
